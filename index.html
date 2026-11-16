@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мини-игры</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero" id="home">
+      <div class="hero-copy">
+        <h1>Добро пожаловать<br>на мой сайт мини-игр</h1>
+        <p>Тебе предстоит пройти несколько увлекательных игр.<br>
+          Если готов, нажимай <strong>«Поехали!»</strong> и <strong>приступай.</strong></p>
+        <a class="button" href="#games">Поехали!</a>
+      </div>
+  </header>
+
+  <nav class="ticker" aria-label="Игры">
+    <a href="#quiz">ВИКТОРИНА</a><span>✦</span>
+    <a href="#guess">УГАДАЙ ЧИСЛО</a><span>✦</span>
+    <a href="#text">ПЕРЕВЕРНИ ТЕКСТ</a><span>✦</span>
+    <a href="#colors">ПРОСТАЯ АРИФМЕТИКА</a><span>✦</span>
+    <a href="#rps">КАМЕНЬ, НОЖНИЦЫ, БУМАГА</a>
+  </nav>
+
+  <main>
+    <section class="about section">
+      <h2>Об играх</h2>
+      <p>В моей коллекции представлено 6 игр на разные темы.<br>
+        Игры несложные — в них может поиграть каждый.<br>
+        Все игры доступны для пользования.</p>
+      <div class="game-grid">
+        <a class="game-card" href="#guess">
+          <img src="assets/guess-number.jpg" alt="Игра «Угадай число»">
+          <div class="card-copy">
+            <small>Игра №1</small>
+            <h3>Угадай число</h3>
+          </div>
+        </a>
+        <a class="game-card" href="#arithmetic">
+          <img src="assets/arithmetic.jpg" alt="Простая арифметика">
+          <div class="card-copy">
+            <small>Игра №2</small>
+            <h3>Простая <br> арифметика</h3>
+          </div>
+        </a>
+        <a class="game-card" href="#text">
+          <img src="assets/text-reverse.jpg" alt="Переверни текст">
+          <div class="card-copy">
+            <small>Игра №3</small>
+            <h3>Переверни текст</h3>
+          </div>
+        </a>
+        <a class="game-card" href="#rps">
+          <img src="assets/rock-paper-scissors.jpg" alt="Камень, ножницы, бумага">
+          <div class="card-copy">
+            <small>Игра №4</small>
+            <h3>Камень, ножницы, бумага</h3>
+          </div>
+        </a>
+        <a class="game-card" href="#quiz">
+          <img src="assets/quiz.jpg" alt="Простая викторина">
+          <div class="card-copy">
+            <small>Игра №5</small>
+            <h3>Простая викторина</h3>
+          </div>
+        </a>
+        <a class="game-card" href="#colors">
+          <img src="assets/random-colors.jpg" alt="Генератор случайных цветов">
+          <div class="card-copy">
+            <small>Игра №6</small>
+            <h3>Генератор случайных цветов</h3>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="games section" id="games">
+      <h2>Мини-игры</h2>
+      <div class="game-list">
+        <article class="feature" id="guess">
+          <div class="feature-copy"><h3>Угадай число</h3><p>Попробуй угадать случайное число от 1 до 100.</p><a class="button" href="#guess">Играть!</a></div>
+          <img src="assets/guess-number-large.jpg" alt="">
+        </article>
+        <article class="feature reverse" id="arithmetic">
+          <img src="assets/arithmetic-large.jpg" alt="">
+          <div class="feature-copy"><h3>Простая арифметика</h3><p>Попробуй решить простые арифметические задачи.</p><a class="button" href="#arithmetic">Играть!</a></div>
+        </article>
+        <article class="feature" id="text">
+          <div class="feature-copy"><h3>Переверни текст</h3><p>Попробуй ввести текст, который будет перевёрнут.</p><a class="button" href="#text">Играть!</a></div>
+          <img src="assets/text-reverse-large.jpg" alt="">
+        </article>
+        <article class="feature reverse" id="rps">
+          <img src="assets/rock-paper-scissors-large.jpg" alt="">
+          <div class="feature-copy"><h3>Камень, ножницы, бумага</h3><p>Сыграй в популярную игру против компьютера.</p><a class="button" href="#rps">Играть!</a></div>
+        </article>
+        <article class="feature" id="quiz">
+          <div class="feature-copy"><h3>Простая викторина</h3><p>Отвечай на вопросы викторины с вариантами ответов.</p><a class="button" href="#quiz">Играть!</a></div>
+          <img src="assets/quiz-large.jpg" alt="">
+        </article>
+        <article class="feature reverse" id="colors">
+          <img src="assets/random-colors-large.jpg" alt="">
+          <div class="feature-copy"><h3>Генератор случайных цветов</h3><p>Игра, в которой при клике фон страницы меняется на случайный.</p><a class="button" href="#colors">Играть!</a></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>Все права защищены.</footer>
+  <script src="script.js"></script>
+</body>
+</html>

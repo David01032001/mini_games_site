@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap');
+
+:root {
+  --ink: #202027;
+  --lime: #c7f52d;
+  --lime-light: #dfff8e;
+  --white: #fff;
+  --muted: #c8c8ce;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #222126;
+  background-color: #222126;
+}
+
+.hero {
+  min-height: 710px;
+  background-color: #e1ff8f;
+  display: flex;
+  align-items: center;
+  padding: 80px max(5%, calc((100% - 1296px) / 2));
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-copy {
+  max-width: 850px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 48px;
+  line-height: 1.15;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.hero p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 28px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 247px;
+  height: 66px;
+  border-radius: 60px;
+  background-color: #222126;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #b7ed26;
+  color: #222126;
+}
+
+/* БЕГУЩАЯ СТРОКА */
+
+.ticker {
+  min-height: 90px;
+  background-color: #b7ed26;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 40px;
+  padding: 20px 30px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker a {
+  color: #222126;
+  font-size: 22px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.ticker span {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+/* ОБЩИЕ СЕКЦИИ */
+
+.section {
+  padding: 100px max(5%, calc((100% - 1296px) / 2));
+}
+
+.about,
+.games {
+  background-color: #222126;
+  color: white;
+}
+
+.section h2 {
+  font-size: 44px;
+  font-weight: 800;
+  margin-bottom: 28px;
+}
+
+.about > p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 70px;
+}
+
+/* КАРТОЧКИ ИГР */
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.game-card {
+  display: block;
+  background-color: white;
+  color: #222126;
+  border-radius: 24px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.game-card:hover {
+  transform: translateY(-8px);
+}
+
+.game-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.2 / 1;
+  object-fit: cover;
+}
+
+.card-copy {
+  padding: 24px 30px 30px;
+}
+
+.card-copy small {
+  display: inline-block;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  padding: 7px 14px;
+  font-size: 12px;
+  margin-bottom: 14px;
+}
+
+.card-copy h3 {
+  font-size: 22px;
+  line-height: 1.25;
+  font-weight: 800;
+}
+
+/* БЛОК С МИНИ-ИГРАМИ */
+
+.games {
+  padding-top: 100px;
+}
+
+.game-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background-color: white;
+  color: #222126;
+  border-radius: 24px;
+  overflow: hidden;
+  min-height: 350px;
+}
+
+.feature.reverse {
+  flex-direction: row;
+}
+
+.feature-copy {
+  flex: 1;
+  padding: 45px;
+}
+
+.feature-copy h3 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.feature-copy p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.feature img {
+  width: 50%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.feature .button {
+  width: 180px;
+  height: 55px;
+}
+
+/* ПОДВАЛ */
+
+footer {
+  background-color: #222126;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 14px;
+}
+
+/* АДАПТАЦИЯ ПОД ПЛАНШЕТЫ */
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: 550px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .game-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .feature-copy {
+    padding: 25px;
+  }
+
+  .feature-copy h3 {
+    font-size: 26px;
+  }
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--lime);
+  height: 150px;
+  color: var(--ink);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 500px;
+    padding: 60px 24px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .button {
+    width: 200px;
+    height: 55px;
+  }
+
+  .ticker {
+    justify-content: flex-start;
+    gap: 25px;
+  }
+
+  .ticker a {
+    font-size: 16px;
+  }
+
+  .section {
+    padding: 65px 20px;
+  }
+
+  .section h2 {
+    font-size: 32px;
+  }
+
+  .about > p {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  .game-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .card-copy h3 {
+    font-size: 20px;
+  }
+
+  .feature,
+  .feature.reverse {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .feature img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1.2 / 1;
+  }
+
+  .feature-copy {
+    padding: 25px;
+    width: 100%;
+  }
+
+  .feature-copy h3 {
+    font-size: 24px;
+  }
+}
